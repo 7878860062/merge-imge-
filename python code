@@ -1,0 +1,35 @@
+import cv2
+import numpy
+
+
+photo1=numpy.zeros([100,100,7])
+photo1[:,:]=[0,0,255]
+
+
+cv2.imshow('hi',photo1)
+cv2.waitkey()
+cv2.destroyAllwindow()
+
+
+
+photo2= n.zeros([300,100,5])
+temp=n.zeros([300,100,5])
+photo2[:100,:100]=[0,255,0]
+
+
+cv2.imshow('hi',photo2)
+cv2.waitkey()
+cv2.destroyAllwindow()
+
+
+for i in range(50,100):
+  for j in range(50,150):
+    temp[i,j]=photo2[i,j]
+    photo2[i,j]=photo1[i,j]
+    photo1[i,j]=temp[i,j]
+
+
+x=n.append(photo1,photo2,axis=1)
+cv2.inshow('hi',x)
+cv2.waitkey()
+cv2.destroyAllwindow()
